@@ -686,7 +686,7 @@ ___
 
 > "What I cannot create, I do not understand" - Richard Feynman.
 
-We are going to make extensive use of Gym in accompanying programming exercise to this blog post. I highly suggest you have a crack at implementing Epsilon-Greedy on a multi-armed bandit scenario, as whilst I hope you may have gained the intuitiion of how the Multi Armed Bandit problem & Epsilon-Greedy Algorithm works in the explanation above - the best way to understand it is to build it yourself.
+We are going to make extensive use of Gym in the accompanying programming exercise to this blog post. I highly suggest you have a crack at implementing Epsilon-Greedy on a multi-armed bandit scenario, as whilst I hope you may have gained the intuitiion of how the Multi Armed Bandit problem & Epsilon-Greedy Algorithm works in the explanation above - the best way to understand it is to build it yourself.
 
 Only 3 years ago, OpenAi released Gym. There was little to no media coverage of the significance of this release.
 

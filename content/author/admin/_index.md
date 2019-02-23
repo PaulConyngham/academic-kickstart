@@ -96,13 +96,13 @@ email = ""
 
 Hi i’m Paul.
 
-I believe the ideas & methods of the Machine Learning world are so significant that they deserve to be shared beyond the small field of researchers & practitioners that use Ai algorithms on a day to day basis.
+I believe the ideas of the Machine Learning world are so significant they deserve to be shared beyond the small field of researchers & practitioners that use Ai algorithms on a day to day basis.
 
 Learning the basic principles of how these algorithms function could have a significant impact on your life.
 
 For example, if you are a University student looking at choosing what degree & career to pursue - did you know there is a Machine Learning principle that can help you with that?
 
-Unfortunately most of these algorithms and most importantly, their underlying principles,  are usually hidden by mathematical notation. Whilst I believe that mathematics is one of the most beautiful languages in existence, I also believe that maths does not help in telling the story of how these graceful machine learning concepts work & most importantly - can be of use to you.
+Unfortunately, most of these algorithms underlying principles are usually hidden by mathematical notation. Whilst I believe that mathematics is one of the most beautiful languages in existence, I also believe that maths does not help in telling the story of how these graceful machine learning concepts can be of use to you.
 
 The aim of this blog will be to use a fundamentally human tool - stories - to explain & teach these machine learning concepts & principles in order to try & spread these ideas to the masses.
 
@@ -112,6 +112,6 @@ The first couple of blog posts are going to be old articles that I have had lyin
 
 From then on, as time permits, we are going to go on a journey exploring the machine learning world together.
 
-Looking forward to it & <3 from Sydney, Australia
+<3 from Sydney, Australia
 
 Paul.
