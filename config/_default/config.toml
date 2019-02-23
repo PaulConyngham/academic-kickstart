@@ -5,7 +5,7 @@
 # Each configuration section is defined by a name in square brackets (e.g. `[outputs]`).
 
 # Title of your site
-title = "Academic"
+title = "Human Algorithms"
 
 # The URL of your site.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
@@ -19,7 +19,7 @@ copyright = ""
 googleAnalytics = ""
 
 # Enable comments by entering your Disqus shortname
-disqusShortname = ""
+disqusShortname = "paulstevenconyngham"
 
 ############################
 ## Advanced options below ##
@@ -56,7 +56,7 @@ preserveTaxonomyNames = true
 
 # Taxonomies.
 [taxonomies]
-  tag = "tags"
+  tag = "Other"
   category = "categories"
   publication_type = "publication_types"
   author = "authors"
