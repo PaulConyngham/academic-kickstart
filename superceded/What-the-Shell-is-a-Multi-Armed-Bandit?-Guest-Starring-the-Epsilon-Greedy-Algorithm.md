@@ -9,7 +9,7 @@ tags = []
 categories = []
 
 # Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder. 
+# To use, add an image named `featured.jpg/png` to your page's folder.
 [image]
   # Caption (optional)
   caption = ""
@@ -39,7 +39,7 @@ Machine learning people love to give fancy names to things so that no one can un
 
 For someone relatively new to machine learning, "The multi armed bandit problem" sounds just like one of these fancy names.
 
-Fret not however! 
+Fret not however!
 
 The point of this blog post is to explain exactly what a Bandit is and most importantly, why it is usually used as the starting point for anyone looking at learning Reinforcement Learning.
 
@@ -109,7 +109,7 @@ Simply, this:
 
 ![alt text](https://i.ibb.co/Cmm0NLn/Screen-Shot-2019-01-18-at-8-38-17-pm.png)
 
-A whole bunch of "bandits" stacked together such there are many "arms" to pull. 
+A whole bunch of "bandits" stacked together such there are many "arms" to pull.
 
 This is where the "multi armed" part comes in.
 
@@ -131,7 +131,7 @@ Well, one definition for Reinforcement Learning, the subfield of machine learnin
 
 &nbsp;
 
-Let's see why defining the multi-armed bandit this way is important by considering an example. 
+Let's see why defining the multi-armed bandit this way is important by considering an example.
 
 ~
 
@@ -153,7 +153,7 @@ So, not knowing what the traffic will be doing *when you wake up in the morning*
 
 We also need a **_plan of what we will do_** once we encounter the intersections, roundabouts & traffic lights as we drive our car on our way to work.
 
-This plan or **_strategy_** is what reinforcement learning aims to figure out. 
+This plan or **_strategy_** is what reinforcement learning aims to figure out.
 
 Even more specifically, reinforcement learning attempts to learn the **_optimal strategy_** -  that is to say, the best possible strategy for a specific task - in this case, the best way of driving through all the obstacles of traffic lights, roundabouts etc from home to work.
 
@@ -200,9 +200,9 @@ The first of which is that in slot machines - you are dealing with _uncertainty_
 
 In other words - if you go up to a slot machine and pull the lever, you have no idea ***when*** you are going to get a cash payout. You also have no idea ***how much*** that cash payout might be.
 
-We also examine the multi armed bandit as our "toy" problem for explaining Reinforcement Learning because it teaches us the second core concept with regards to RL. 
+We also examine the multi armed bandit as our "toy" problem for explaining Reinforcement Learning because it teaches us the second core concept with regards to RL.
 
-That is, what to do when we have more than one option for solving a problem. 
+That is, what to do when we have more than one option for solving a problem.
 
 In the multi-armed Bandit problem there are many slot machine levers to pull. So - we have many options. Just like you do when driving on your way to work.
 
@@ -231,7 +231,7 @@ There is this age old problem in life and it goes something like this.
 
 Let’s say you are on the hunt for a hot date with the eventual goal of picking up a life partner.
 
-First you hop on your favourite dating app of choice. 
+First you hop on your favourite dating app of choice.
 
 After chatting to a few people you manage to score yourself a hot date. The way they were coming on to you so strongly on the first date was a was a bit weird, strike out, you decide that's it for the dating app person.
 
@@ -281,7 +281,7 @@ Ok then. Time for your first RL (baby) algorithm
 
 &nbsp;
 
-&nbsp;z
+&nbsp;
 
 
 # The Epsilon-Greedy Algorithm
@@ -290,7 +290,7 @@ Simply, the Episilon Greedy Algorithm is this:
 
 ![alt text](https://i.ibb.co/4TPp8h2/Screen-Shot-2019-01-19-at-1-02-05-pm.png)
 
-Seriously though, if you did not understand that no dramas at all. 
+Seriously though, if you did not understand that no dramas at all.
 
 The rest of this post is going to be about breaking apart the mathematical notation above into a more human readable format :).
 
@@ -332,15 +332,15 @@ Say we have a bandit slot machine and that if I pulled the lever on the bandit 3
 
 *Figure 1. Average payout of a slot machine based on the amount of times that the lever has been pulled. For example, we can see that at around the $70 mark the lever on the slot machine has been pulled around 44 times.*
 
-A slot machine is meant to be **_random_** -  and we would like to discover a pattern in the “random” data if it exists. 
+A slot machine is meant to be **_random_** -  and we would like to discover a pattern in the “random” data if it exists.
 
 We use the idea of a **_distribution_** to represent our Bandit's distribution of possible cash payouts. In essence the distribution is representing **_uncertainty_**.
 
 Every time we pull our lever on the bandit, it will give a different cash payout.
 
-In figure 1, sometimes it will be 65 dollars, sometimes it will be 80, but the average payout over time will be $70. 
+In figure 1, sometimes it will be 65 dollars, sometimes it will be 80, but the average payout over time will be $70.
 
-The middle of the bell graph in figure 1 is centered around the 70 dollar mark. We can therefore say that our slot machine in the graph in figure 1 has an average payout of around 70 dollars. 
+The middle of the bell graph in figure 1 is centered around the 70 dollar mark. We can therefore say that our slot machine in the graph in figure 1 has an average payout of around 70 dollars.
 
 Let us now examine the case of two slot machines.
 
@@ -374,7 +374,7 @@ Linking back to what we talked about earlier, what we were doing by sampling eac
 
 In summary,
 
-Given a problem with many options. 
+Given a problem with many options.
 
 What we would like to do is explore all the options available to us by randomly sampling between the different options, over and over until we start to build up a distribution of data for each option.
 
@@ -431,7 +431,7 @@ and when ε = 0, exploitation is maximised.
 
 How then do we go from an epsilon of 1 down to 0?
 
-Well, one way to do it is to choose a mathematical function to control Epsilon. 
+Well, one way to do it is to choose a mathematical function to control Epsilon.
 
 There are many mathematical functions you can use to control Epsilon. However in this example we are going control Epsilon using a linear function...or more commonly known as a straight line.
 
@@ -447,7 +447,7 @@ Think of our **linear function** **as the volume knob controlling the ratio betw
 
 From high school mathematics, a straight line has the form:
 
-(1.)   $y = mx + c ​$  
+(1.)   $y = mx + c$  
 
 where m equals the gradient of the line, and c is the Y axis intercept.
 
@@ -461,7 +461,7 @@ If we choose a straight line as our function for controlling Epsilon then our fu
 
 We know we would like to start off with exploration maximised, so equal to one. We would also like to scale down Epsilon over time.  One way to control Epsilon would then be to subtract a straight line from one. Epsilon can then be defined as:
 
- (3.) $ε = 1 - f(x)​$
+ (3.) $ε = 1 - f(x)$
 
 Substituing equation 2 yields:
 
@@ -469,7 +469,7 @@ Substituing equation 2 yields:
 
 If we replace x for t (time) this gives us our final equation:
 
- (5.) $ε = 1 - mt - c ​$
+ (5.) $ε = 1 - mt - c $
 
 Finally, if we set c to zero, we get the final diagram below. Exactly the type of operation that we are after- scaling epsilon from 1 to 0:
 
@@ -483,13 +483,13 @@ Finally, if we set c to zero, we get the final diagram below. Exactly the type o
 
 &nbsp;
 
-So to summarize the epsilon-greedy process, via **sampling** we slowly start to figure out what is the best possible option to use to solve a problem. Simultaneously,  whilst we are sampling **we turn down the Epsilon volume knob.** 
+So to summarize the epsilon-greedy process, via **sampling** we slowly start to figure out what is the best possible option to use to solve a problem. Simultaneously,  whilst we are sampling **we turn down the Epsilon volume knob.**
 
 Turning down  Epsilon decreases the amount of exploration we are doing and starts focusing in on the best solution we have found so far to solve a given problem. Aka going **"greedy".**
 
 Taking this back to our toy problem of bandits, we first start exploring by pulling different levers at random between Bandit # 1 and Bandit # 2.
 
-Following this random sampling process, we start to build distributions of our different bandit options and see which bandit is going to give us the highest average reward in the form of cash payout. 
+Following this random sampling process, we start to build distributions of our different bandit options and see which bandit is going to give us the highest average reward in the form of cash payout.
 
 ***Simultanously as we are sampling, we start to decrease Epsilon and start focusing on the bandit option that is going to give us the highest average cash reward.***
 
@@ -513,13 +513,13 @@ In reinforcement learning we like to refer to our algorithm systems as "agents".
 
 We have seen that it is a synthesis of a purely exploratory agent and a completely greedy agent.
 
-In the multiarmed bandit slot machine problem a ***purely exploratory agent*** would sample all the different bandits options available evenly - building a distribution for each bandit. 
+In the multiarmed bandit slot machine problem a ***purely exploratory agent*** would sample all the different bandits options available evenly - building a distribution for each bandit.
 
-However this has the downside that the agent never gets to use its knowledge of the best option it has discovered so far. 
+However this has the downside that the agent never gets to use its knowledge of the best option it has discovered so far.
 
 One way to think of a ***purely exploratory agent*** is a student that goes to University and starts 5 different degrees - but quits after 1 semester in all of them - never sticking it out to see which degree might have been best for them, or in other words, giving them the highest average reward. ;)
 
-However, ***A purely greedy agent***  would choose a bandit and stick to it's choice for all eternity. 
+However, ***A purely greedy agent***  would choose a bandit and stick to it's choice for all eternity.
 
 A purely greedy agent can be though of as being very "narrow minded" as it will not try other bandit options to see if they provide better average long term reward.
 
@@ -555,7 +555,7 @@ In our example we take an **action** and pull the lever on the slot machine. The
 
 The mathematical notation for assignment of a Q value looks like this:
 
-$Q(s,a) = 0$ 
+$Q(s,a) = 0$
 
 Where s & a represent state & action respectively.
 
@@ -577,7 +577,7 @@ Given many actions, or pulls of our lever on the bandit, the *expected* Q value 
 
 &nbsp;
 
-##  $Q_{n}(a) = \frac{1}{n}(r1 + r2 +r3)  .(1) $
+##  $ Q_{n}(a) = \frac{1}{n}(r1 + r2 +r3)  .(1) $
 
 &nbsp;
 
@@ -589,15 +589,17 @@ Where:
 
 &nbsp;
 
-So for example, say we sample bandit #1, 3 times.
+So for example, say we sample bandit # 1, 3 times.
 
-This means that we get three different rewards r1, r2 & r3. 
+This means that we get three different rewards r1, r2 & r3.
 
 Because we visited bandit#1 3 times we also know that n = 3
 
 Therefore:
 
-## $Q = (1/n)*(r1+r2+r3) .(2)$	
+
+
+$ Q = \frac{1}{n}(r1+r2+r3) (2) $
 
 &nbsp;
 
@@ -605,7 +607,8 @@ substituting 3 for n gives us:
 
 &nbsp;
 
-## $Q = (1/3)*(r1+r2+r3) .(3)$	
+$ Q =  \frac{1}{3}(r1+r2+r3).(3) $
+
 
 &nbsp;
 
@@ -623,7 +626,7 @@ Like so:
 
 ![alt text](https://i.ibb.co/4J1SmFq/Screen-Shot-2019-02-21-at-7-55-55-am.png)
 
-*Table 1: Each Bandit has a seperate associated Q value, which we update individually each time that bandit is sampled.* 
+*Table 1: Each Bandit has a seperate associated Q value, which we update individually each time that bandit is sampled.*
 
 &nbsp;
 
@@ -631,13 +634,13 @@ In a real life multi armed bandit scenario, we would have to keep track of many 
 
 For 8 "samples" of our bandit this would looks like this:
 
-$ Q = (1/8)*(r1+r2+r3+r4+r5+r6+r7+r8) ...$ 
+$ Q = \frac{1}{8}(r1+r2+r3+r4+r5+r6+r7+r8)  $ ...
 
-If we were to continue to run this algorithm for a while, you can quickly see that we would run out of computer memory. 
+If we were to continue to run this algorithm for a while, you can quickly see that we would run out of computer memory.
 
 In order to reduce the amount of memory that is in use, we can use some mathematical trickery to compress the above equation, such that when we update our Q value with every visit to the bandit our formula becomes:
 
-## $ Q_{n+1}(a) = Q_{n}(a) + \frac{1}{n+1}(r_{n+1}-  Q_{n}(a))  .(4) $
+ $ Q_{n+1}(a) = Q_{n}(a) + \frac{1}{n+1}(r_{n+1} -  Q_{n}(a))  .(4) $
 
 Where:
 
@@ -646,7 +649,7 @@ Where:
 - **n +1** is the number of times that bandit (or state) has been visited. There is a "+1" here to stop a divide by zero error at the intialization of the algorithm.
 - **r+1** is the updated reward from out latest sample of the bandit.
 
-Finally, now that we have calculated our table of Q values, we need to select from our table the Bandit with the highest average payout. 
+Finally, now that we have calculated our table of Q values, we need to select from our table the Bandit with the highest average payout.
 
 Again, we are selecting the Bandit with the highest average payout as our "choice" amoungst the many options of Bandits that are available to us because it is the best choice we have discovered so far.
 
@@ -670,7 +673,7 @@ If we continue to run our Epsilon Greedy agent for a while on a problem, say the
 
 The Reward-Averaging Sampling learning rule is then the heart of the epsilon greedy algorithm, or the forumula we use to update our Q table, **you have to use this code in the upcoming exercise to make the Epsilon-Greedy agent work.**
 
-In summary, Epsilon Greedy is a powerful method for when you have a whole bunch of options, whose reward distribution you do not know & are able to find the optimal reward distribution using sampling. 
+In summary, Epsilon Greedy is a powerful method for when you have a whole bunch of options, whose reward distribution you do not know & are able to find the optimal reward distribution using sampling.
 
 The important thing to take away is that you can replace the Bandit problem with any problem which has different options which have hidden distributions. For example - an email marketing  campaign, and applying the exact same methods, determine the best products to display in that email campaign.
 
@@ -686,7 +689,7 @@ ___
 
 > "What I cannot create, I do not understand" - Richard Feynman.
 
-We are going to make extensive use of Gym in the accompanying programming exercise to this blog post. I highly suggest you have a crack at implementing Epsilon-Greedy on a multi-armed bandit scenario, as whilst I hope you may have gained the intuitiion of how the Multi Armed Bandit problem & Epsilon-Greedy Algorithm works in the explanation above - the best way to understand it is to build it yourself.
+We are going to make extensive use of Gym in the accompanying programming exercise to this blog post. I highly suggest you have a crack at implementing Epsilon-Greedy on a multi-armed bandit scenario, as whilst I hope you may have gained the intuition of how the Multi Armed Bandit problem & Epsilon-Greedy Algorithm works in the explanation above - the best way to understand it is to build it yourself.
 
 Only 3 years ago, OpenAi released Gym. There was little to no media coverage of the significance of this release.
 
@@ -700,14 +703,10 @@ In the accompanying exercise to this post below, we are going to make extensive 
 
 Lets get cracking building your very first intro reinforcement learning algorithm with OpenAi gym.
 
-We will be using Google Colaboratory for the compute, so you will also need a Google account. 
+We will be using Google Colaboratory for the compute, so you will also need a Google account.
 
 To start the exercise [click the link here](https://colab.research.google.com/drive/1AgvnqbumrkPAFKI-Apt1SUtvbws4jVSS), or image below:
 
 &nbsp;
 
 [![IMAGE ALT TEXT HERE](https://i.ibb.co/52nm1gw/Screen-Shot-2019-02-22-at-9-16-59-pm.png)](https://colab.research.google.com/drive/1AgvnqbumrkPAFKI-Apt1SUtvbws4jVSS)
-
-
-
-

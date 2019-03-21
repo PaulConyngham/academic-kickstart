@@ -42,4 +42,10 @@ url_poster = ""
   # Focal point (optional)
   # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
   focal_point = ""
+
 +++
+
+
+&nbsp;
+
+## Coming to the Internet, late March 2019
